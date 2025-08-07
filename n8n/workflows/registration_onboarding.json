@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "name": "Supabase Trigger",
+      "type": "n8n-nodes-base.supabaseTrigger",
+      "parameters": {
+        "table": "users",
+        "events": ["INSERT"]
+      }
+    },
+    {
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.brevo",
+      "parameters": {
+        "template_id": "welcome_template",
+        "personalization": "{{$json}}"
+      }
+    },
+    {
+      "name": "Stripe Payment",
+      "type": "n8n-nodes-base.stripe",
+      "parameters": {
+        "operation": "create",
+        "resource": "customer"
+      }
+    },
+    {
+      "name": "Sync Notion",
+      "type": "n8n-nodes-base.notion",
+      "parameters": {
+        "database_id": "user_database",
+        "operation": "create"
+      }
+    }
+  ]
+}
+

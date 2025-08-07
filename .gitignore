@@ -1,0 +1,8 @@
+node_modules
+.venv
+.env
+.next
+.DS_Store
+__pycache__
+.streamlit/
+

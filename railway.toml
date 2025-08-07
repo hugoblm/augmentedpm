@@ -1,0 +1,30 @@
+[environments.production]
+  [environments.production.services.frontend]
+  source = "./frontend"
+  builder = "NIXPACKS"
+  domains = ["app.domain.com"]
+
+  [environments.production.services.backend]
+  source = "./backend"
+  builder = "NIXPACKS"
+  domains = ["api.domain.com"]
+
+  [environments.production.services.chatbot]
+  source = "./streamlit-chat"
+  builder = "NIXPACKS"
+  domains = ["chat.domain.com"]
+
+  [environments.production.services.dashboard]
+  source = "./streamlit-dashboard"
+  builder = "NIXPACKS"
+  domains = ["dashboard.domain.com"]
+
+[environments.production.variables]
+SUPABASE_URL = "${{ secrets.SUPABASE_URL }}"
+SUPABASE_ANON_KEY = "${{ secrets.SUPABASE_ANON_KEY }}"
+OPENAI_API_KEY = "${{ secrets.OPENAI_API_KEY }}"
+RAGIE_API_KEY = "${{ secrets.RAGIE_API_KEY }}"
+STRIPE_SECRET_KEY = "${{ secrets.STRIPE_SECRET_KEY }}"
+GOOGLE_MEET_CREDENTIALS = "${{ secrets.GOOGLE_MEET_CREDENTIALS }}"
+BACKEND_API_URL = "${{ secrets.BACKEND_API_URL }}"
+
