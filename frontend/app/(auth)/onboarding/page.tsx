@@ -14,7 +14,7 @@ export default function OnboardingPage() {
       <h1 className="text-2xl font-semibold mb-4">Onboarding</h1>
       <div className="space-y-4">
         <label className="block">
-          Niveau d'expérience
+          Niveau d&apos;expérience
           <select className="w-full border px-2 py-2 rounded" value={answers.experience}
             onChange={e => setAnswers(a => ({...a, experience: e.target.value as any}))}>
             <option value="beginner">Débutant</option>
