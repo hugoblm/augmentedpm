@@ -1,4 +1,4 @@
-# Formly - Plateforme Product Management IA (Architecture Hybride)
+# Augmented - Plateforme Product Management IA (Architecture Hybride)
 
 Ce monorepo contient l’implémentation initiale (scaffolding) d’une plateforme e-learning Product Management IA basée sur l’architecture validée :
 - Frontend: Next.js 14 + React + TypeScript + Tailwind CSS
