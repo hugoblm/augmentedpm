@@ -6,3 +6,31 @@ node_modules
 __pycache__
 .streamlit/
 
+# Environment files (ignore across the repo)
+# Keep examples tracked
+# Root-level (already included): .env
+.env
+
+# Recursively ignore typical env files
+**/.env
+**/.env.*
+**/*.env
+**/*.env.*
+
+# Keep example templates
+!**/*.env.example
+!**/.env.example
+!*.env.example
+
+# Next.js local env files
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+
+# Monorepo ignores
+logs/
+pids/
+frontend/node_modules
+backend/.venv
+streamlit-chat/.venv
+streamlit-dashboard/.venv
